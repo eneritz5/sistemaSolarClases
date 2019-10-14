@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id='planeta'></p>
+
+
+    <script>
+        class Planeta {
+            constructor(nombre, color, imagen) {
+                this.nombre = nombre;
+                this.color = color;
+                this.imagen = imagen;
+            }
+            mostrarPlaneta() {
+                return '<div><h1>' + this.nombre + '</h1><img src="'+this.imagen+'"><p>' + this.color + '</p></div>';
+
+                console.log("El nombre del planeta es " + this.nombre);
+                console.log("El color del planeta es " + this.color);
+            }
+        }
+
+
+        let planeta = new Planeta("mercurio", "gris", "https://www.astromia.com/fotosolar/fotos/planetamercurio.jpg")
+        planeta.mostrarPlaneta();
+
+        let nombre = document.getElementById('planeta');
+        nombre.innerHTML = (planeta.mostrarPlaneta());
+
+
+        
+
+
+    </script>
+</body>
+
+</html>
